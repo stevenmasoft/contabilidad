@@ -1,153 +1,58 @@
-<!DOCTYPE HTML>
-<html lang="es">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Login - CallCenter 2016</title>
-       
-       
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrapValidator.min.js"></script>
+  <script src="js/noty.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		
-		
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
-       
-        <style>
-            input{
-                margin-top:5px;
-                margin-bottom:5px;
-            }
-            .right{
-                float:right;
-            }
-        </style>
-        <style>
-			body {
-			
-			    /* Ubicación de la imagen */
-		 
-		  background-image: url(view/images/call_center.jpg);
-		
-		  /* Nos aseguramos que la imagen de fondo este centrada vertical y
-		    horizontalmente en todo momento */
-		  background-position: center center;
-		
-		  /* La imagen de fondo no se repite */
-		  background-repeat: no-repeat;
-		
-		  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
-		     la altura del contenido supere la altura de la imagen. */
-		  background-attachment: fixed;
-		
-		  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
-		     del navegador */
-		  background-size: cover;
-		
-		  /* Fijamos un color de fondo para que se muestre mientras se está
-		    cargando la imagen de fondo o si hay problemas para cargarla  */
-		  background-color: #464646;
-			}
-			</style>
-    </head>
-   
-   
-   
-    <body class="img-responsive" style="background-color: #d9e3e4;" >
-     <?php include("view/modulos/modal.php"); ?>
-     <?php include("view/modulos/head.php"); ?>
-       
-   
-   
-        <form action="<?php echo $helper->url("usuarios","Loguear"); ?>" method="post"  class="col-lg-12" style=" padding-top:150px;">
-        
-        <div class="row">
-        
-        
-        	<div class="col-xs-1 col-md-1">
-        	</div>
-        	<div class="col-xs-8 col-md-4">
-        		<div class="col-xs-4 col-md-2">
-        		</div>
-        		
-        	    <div class="col-xs-8 col-md-8">
-		        	  <div   style="background:#A5DF00 ;border-radius: 5px;  border: 1px solid #063B41;"  >
-		     		     <div class="row">
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-								
-								
-								<div class="col-xs-8 col-md-8">					
-									<h5 class="text-center" style="color: #ffffff;" >Inicio de Sesión</h5>
-								</div>
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-						</div>            	
-		            		
-		     		     
-		     		     
-		   
-		        		<div class="text-center"  >
-							<div class="row">
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-								<div class="col-xs-8 col-md-8">					
-									<input type="text" name="usuarios" class="form-control" placeholder="Usuario"  style="text-align: center; " />
-								</div>
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-							</div>            	
-		            		<div class="row">
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-								<div class="col-xs-8 col-md-8">					
-									<input type="password" name="clave" placeholder="Clave" class="form-control"  style="text-align: center; "/>
-								</div>
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-							</div>            	
-		            		
-		            		<div class="row">
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-								<div class="col-xs-8 col-md-8">					
-									<input type="submit" value="Login" class="btn btn-default" />
-								<br>
-								<br>
-									
-								</div>
-								<div class="col-xs-2 col-md-2">					
-									
-								</div>
-							</div>            	
-		            		
-		            	
-		            	</div>
-		              </div>
-		          </div>
-		          <div class="col-xs-2 col-md-2">
-        		  </div>
-        	</div>
-            <div class="col-xs-3 col-md-3">
-        	</div>
-        	
-          
-    	</div>    
-        </form>
-       
-   
-        
-    	<footer class="col-lg-12">
-           <?php include("view/modulos/footer.php"); ?>
-        </footer>     
-    </body>
+    <div id="login-overlay" class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Login to netosolis.com</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-6">
+                      <div class="well">
+                          <form id="form-login">
+                              <div class="form-group">
+                                  <label for="usuario" class="control-label">Usuario</label>
+                                  <input type="email" class="form-control" id="usuario" name="usuario" value=""  placeholder="example@gmail.com">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="control-label">Password</label>
+                                  <input type="password" class="form-control" id="password" name="password" value="">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" name="remember" id="remember"> Recordarme
+                                  </label>
+                              </div>
+                              <button type="submit" class="btn btn-success btn-block">Login</button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <p class="lead">Datos Para Ingresar <span class="text-success"></span></p>
+                      <ul class="list-unstyled" style="line-height: 2">
+                          <li><span class="fa fa-check text-success"></span> Usuario: user2550@netosolis.com</li>
+                          <li><span class="fa fa-check text-success"></span> Password: pass990</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
 </html>
