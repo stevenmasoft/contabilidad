@@ -27,7 +27,6 @@ public function index(){
 			
 			$usuarios=new UsuariosModel();
 			//Notificaciones
-			$usuarios->MostrarNotificaciones($_SESSION['id_usuarios']);
 			
 			
 			//creacion menu busqueda
@@ -390,8 +389,6 @@ public function index(){
     			$_id_usuario = $_SESSION['id_usuarios'];
     			$_ip_usuario = $_SESSION['ip_usuarios'];
     			
-    			//NOTIFICACIONES
-    			$usuarios->MostrarNotificaciones($_id_usuario);
     			
     			$_id_rol=$_SESSION['id_rol'];
     			$usuarios->MenuDinamico($_id_rol);
