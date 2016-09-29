@@ -4,7 +4,7 @@
 
 <?php require_once 'config/global.php';?> 
 
-  <title>AllCoercive</title>
+  <title>Maycol</title>
   <link rel="shortcut icon" href="view/favicon.ico" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +59,7 @@ $(document).ready(function(){
 <div class="container"  style=" -webkit-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.49);-moz-box-shadow: 0px 2px 2px 4px rgba(0,0,0,0.49); box-shadow: 0px 2px 2px 4px rgba(0,0,0,0.49);">
   
   
-  <div class="row" style=" background-color: #81d4fa ;">
+  <div class="row" style=" background-color:  #F2F2F2  ;">
   
   <div style=" margin-top: 10px; "   class="col-xs-6 col-md-8"  >
   <img src="view/images/logo.png" class="img-responsive" alt="Responsive image" width="350" height="350">
@@ -86,7 +86,7 @@ $(document).ready(function(){
 			
 			<div class="dropdown">
 			
-				  <button id="noti_btn" class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user" ><FONT  SIZE=2><?php echo " ".$_SESSION['nombre_usuarios'];?></FONT></span>
+				  <button id="noti_btn" class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user" ><FONT  SIZE=2><?php echo " ".$_SESSION['nombre_usuarios'];?></FONT></span>
 				  
 				  <span class="caret"></span>
 				  </button>
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		
 		
 			<div class="dropdown">
-					  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-lock" > Iniciar Sesión </span>
+					  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-lock" > Iniciar Sesión </span>
 					  
 					  </button>
 					  

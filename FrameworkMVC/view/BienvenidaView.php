@@ -19,7 +19,7 @@
         
        
         </head>
-    <body>
+    <body class="img-responsive" style="background-color:  #616161  ;">
      
        <?php include("view/modulos/modal.php"); ?>
        <?php include("view/modulos/head.php"); ?>
