@@ -31,66 +31,7 @@
 }
 </style>
 		
- 
- <script type=text/javascript>
-//setTimeout("document.location=document.location",2000);
-$(document).ready(function(){
 
-	var $divcontenedor = $("#div_head");
-
-	$divcontenedor.empty();
-
-    var datos=1;
-
-
-	 var result=  $.post("<?php echo $helper->url("VerNotificaciones","iniciaNotificaciones"); ?>",  "json");
-
-	 result.done(function( result_notificaciones ) {
-		 
-		 cantidad_notificaciones = JSON.parse(result_notificaciones);
-		var notificaciones ='<button type="button" id="boton_notificacion" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <span class="badge">'+cantidad_notificaciones.length+'</span></button>';
-         
-		
-		 notificaciones=notificaciones+'<ul class="dropdown-menu" id="ul_notificacion">'+'</ul>';
-
-		  $divcontenedor.append(notificaciones);
-
-		  var $ul=$("#ul_notificacion");
-
-		  $.post("<?php echo $helper->url("VerNotificaciones","iniciaNotificaciones"); ?>", datos, function(resultNotificaciones) {
-
-               
-			  $.each(resultNotificaciones, function(index, value) {
-				  $ul.append('<li  ><a href="index.php?controller=VerNotificaciones&action=actualizaNotificaciones&id_notificaciones='+value.id_notificaciones+'&controlador='+value.controlador_tipo_notificacion+'&acciones='+value.accion_tipo_notificacion+'">'+ value.descripcion_notificaciones+'</a></li>');	
-                  
-			 
-                		if (value.controlador_tipo_notificacion == 0){
-
-                			   	
-                				alert('entro');
-                        }
-
-                		else{
-
-                			
-    			 	    }
-
-			  });
-          	      		 
-                	
-                	
-              
-		 		
-
-		 		 	 		   
-		  }, 'json');
-		  
-	 });
-
-});
-	
-
-</script>  
 
 <script>
 $(document).ready(function(){
@@ -118,10 +59,10 @@ $(document).ready(function(){
 <div class="container"  style=" -webkit-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.49);-moz-box-shadow: 0px 2px 2px 4px rgba(0,0,0,0.49); box-shadow: 0px 2px 2px 4px rgba(0,0,0,0.49);">
   
   
-  <div class="row" style=" background-color:#A5DF00;">
+  <div class="row" style=" background-color: #81d4fa ;">
   
   <div style=" margin-top: 10px; "   class="col-xs-6 col-md-8"  >
-  <img src="view/images/logo-callcenter.png" class="img-responsive" alt="Responsive image">
+  <img src="view/images/logo.png" class="img-responsive" alt="Responsive image" width="350" height="350">
   </div>
   
  	 
