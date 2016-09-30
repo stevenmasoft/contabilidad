@@ -80,8 +80,8 @@ $controladores=$_SESSION['controladores'];
             <a href="index.php?controller=TipoPersona&action=index"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"> Tipo de Personas</span> </a>
 			</li>
 		
-		   <li style="<?php echo getcontrolador("TipoIdentificación",$controladores) ?>">
-            <a href="index.php?controller=TipoIdentificación&action=index"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"> Tipo de Identificación</span> </a>
+		   <li style="<?php echo getcontrolador("TipoIdentificaciï¿½n",$controladores) ?>">
+            <a href="index.php?controller=TipoIdentificaciï¿½n&action=index"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"> Tipo de Identificaciï¿½n</span> </a>
 			</li> 
 		     	
 </ul>

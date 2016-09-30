@@ -43,14 +43,17 @@
 			}
 			</style>
 
+
+
+
 		
 </head>
 
-<body class="img-responsive" style="background-color:  #616161  ;">
-    
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+       
    
- <form id="form-login" action="<?php echo $helper->url("usuarios","Loguear"); ?>" method="post" class="col-lg-12" style="padding-top:130px;">
-       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+ <form id="form-login"  action="<?php echo $helper->url("usuarios","Loguear"); ?>" method="post" class="col-lg-12" style="padding-top:100px;">
                      
     <div id="login-overlay" class="modal-dialog" >
       <div class="modal-content">
@@ -71,8 +74,8 @@
                                   <span class="help-block"></span>
                               </div>
                              
-                              <button type="submit" class="btn btn-success btn-block">Login</button>
-                          
+                              <button type="submit" class="btn btn-success btn-block" >Login</button>
+                               
                       </div>
                   </div>
                   
@@ -91,8 +94,11 @@
           </div>
       </div>
  </div>
-  </form>
-        
+ </form>
+ <br>
+ <div class="col-lg-12 col-md-6"> 
+ <?php include("view/modulos/Contactos.php"); ?>
+ </div>       
         <footer class="col-lg-12">
            <?php include("view/modulos/footer.php"); ?>
         </footer> 
