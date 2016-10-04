@@ -20,7 +20,6 @@ $controladores=$_SESSION['controladores'];
  	
  	return $display;
  }
-
 ?>
 
 
